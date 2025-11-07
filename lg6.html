@@ -1,0 +1,152 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменяем кириллицу на латиницу по клику</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        header, nav, footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #00d6d6;
+        }
+        nav a.active {
+            font-weight: bold;
+        }
+        .passport-container {
+            position: relative;
+            display: inline-block;
+        }
+        .passport-container img {
+            width: 600px;
+            height: auto;
+        }
+        .text {
+            position: absolute;
+            color: black;
+            font-size: 1.2em;
+        }
+        #issued {
+            top: 90px;
+            left: 170px;
+        }
+        #surname {
+            top: 468px;
+            left: 350px;
+        }
+        #name {
+            top: 530px;
+            left: 340px;
+        }
+        #father {
+            top: 565px;
+            left: 325px;
+        }
+        #gender {
+            top: 596px;
+            left: 234px;
+        }
+        #birthdate {
+            top: 596px;
+            left: 400px;
+        }
+        #birthplace {
+            top: 630px;
+            left: 340px;
+        }
+        #photo {
+            position: absolute;
+            top: 494px;
+            left: 25px;
+            width: 168px;
+            height: auto;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #00d6d6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Изменяем кириллицу на латиницу по клику</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="Table.html">Товар и цены</a>
+            <a href="Text.html">Описание товаров</a>
+            <a href="Task1017.html">Задача</a>
+            <a href="Passport.html" class="active">Паспорт</a>
+            <a href="Form.html">Украшения на заказ</a>
+            <a href="Form2.html">Связаться с нами</a>
+            <a href="https://t.me/SV_Lasagna" target="_blank">Связаться с автором</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="passport-container">
+            <img src="https://github.com/SvShumilova/GemGarden/blob/main/imgs/Passport.JPG?raw=true" alt="Паспорт РФ">
+    
+            <img id="photo" src="https://github.com/SvShumilova/GemGarden/blob/main/imgs/PassportPhoto.png?raw=true" alt="Фото" title="Это моя фотография">
+    
+            <div class="text" id="issued">ГУ МВД РОССИИ ПО Г. МОСКВЕ</div>
+            <div class="text" id="surname">Шумилова</div>
+            <div class="text" id="name">Вероника</div>
+            <div class="text" id="father">Сергеевна</div>
+            <div class="text" id="gender">Жен</div>
+            <div class="text" id="birthdate">05.02.2007</div>
+            <div class="text" id="birthplace">Москва</div>
+        </div>
+    
+        <div class="button-container">
+            <button id="translateButton">Поменять</button>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2024 Gem Garden</p>
+    </footer>
+    
+    <script>
+        document.getElementById('translateButton').addEventListener('click', function() {
+            const issuedText = document.getElementById('issued');
+            const surnameText = document.getElementById('surname');
+            const nameText = document.getElementById('name');
+            const patronymicText = document.getElementById('father');
+            const genderText = document.getElementById('gender');
+            const birthplaceText = document.getElementById('birthplace');
+    
+            if (issuedText.innerText === 'ГУ МВД РОССИИ ПО Г. МОСКВЕ') {
+                issuedText.innerText = 'RUSSIA MOSCOW GU MVD';
+                surnameText.innerText = 'Shumilova';
+                nameText.innerText = 'Veronika';
+                patronymicText.innerText = 'Sergeevna';
+                genderText.innerText = 'Female';
+                birthplaceText.innerText = 'Moscow';
+            } else {
+                issuedText.innerText = 'ГУ МВД РОССИИ ПО Г. МОСКВЕ';
+                surnameText.innerText = 'Шумилова';
+                nameText.innerText = 'Вероника';
+                patronymicText.innerText = 'Сергеевна';
+                genderText.innerText = 'Жен';
+                birthplaceText.innerText = 'Москва';
+            }
+        });
+    </script>
+    
+
+</body></html>
