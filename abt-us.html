@@ -138,58 +138,6 @@
     </section>
     <br> <br>
 
-        <h1>Изменяем кириллицу на латиницу по клику</h1>
-    
-    <main>
-        <div class="passport-container">
-            <img src="https://github.com/SvShumilova/GemGarden/blob/main/imgs/Passport.JPG?raw=true" alt="Паспорт РФ">
-    
-            <img id="photo" src="https://github.com/SvShumilova/GemGarden/blob/main/imgs/PassportPhoto.png?raw=true" alt="Фото" title="Это моя фотография">
-    
-            <div class="text" id="issued">ГУ МВД РОССИИ ПО Г. МОСКВЕ</div>
-            <div class="text" id="surname">Шумилова</div>
-            <div class="text" id="name">Вероника</div>
-            <div class="text" id="father">Сергеевна</div>
-            <div class="text" id="gender">Жен</div>
-            <div class="text" id="birthdate">05.02.2007</div>
-            <div class="text" id="birthplace">Москва</div>
-        </div>
-    
-        <div class="button-container">
-            <button id="translateButton">Поменять</button>
-        </div>
-    </main>
-    
-    
-    <script>
-        document.getElementById('translateButton').addEventListener('click', function() {
-            const issuedText = document.getElementById('issued');
-            const surnameText = document.getElementById('surname');
-            const nameText = document.getElementById('name');
-            const patronymicText = document.getElementById('father');
-            const genderText = document.getElementById('gender');
-            const birthplaceText = document.getElementById('birthplace');
-    
-            if (issuedText.innerText === 'ГУ МВД РОССИИ ПО Г. МОСКВЕ') {
-                issuedText.innerText = 'RUSSIA MOSCOW GU MVD';
-                surnameText.innerText = 'Shumilova';
-                nameText.innerText = 'Veronika';
-                patronymicText.innerText = 'Sergeevna';
-                genderText.innerText = 'Female';
-                birthplaceText.innerText = 'Moscow';
-            } else {
-                issuedText.innerText = 'ГУ МВД РОССИИ ПО Г. МОСКВЕ';
-                surnameText.innerText = 'Шумилова';
-                nameText.innerText = 'Вероника';
-                patronymicText.innerText = 'Сергеевна';
-                genderText.innerText = 'Жен';
-                birthplaceText.innerText = 'Москва';
-            }
-        });
-    </script>
-
-
-
     <a href="index.html" class="back-to-top">К началу</a>
     <br> <br>
     
@@ -200,6 +148,7 @@
     
 
 </body></html>
+
 
 
 
